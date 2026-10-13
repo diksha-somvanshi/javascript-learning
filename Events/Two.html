@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event second file</title>
+</head>
+
+<body>
+    <h1>chai aur code </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const fun1 = function(){
+        console.log("Diksha");
+    }
+    setTimeout(fun1,2000); //waits for provided time and then start working
+
+   const changHeading = function(){
+     document.querySelector('h1').innerHTML = "best js series";
+   }
+   const method2 = setTimeout(changHeading,3000);
+   //to stop working of method , if it is not worked properly within time
+   document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(method2)
+    console.log("stopped..!")
+   })
+
+</script>
+</html>

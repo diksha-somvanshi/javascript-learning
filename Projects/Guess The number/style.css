@@ -1,0 +1,357 @@
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1a2456,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #30134f,
+            transparent 35%
+        ),
+        #080b16;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   GAME CARD
+======================================== */
+
+.form {
+    width: 420px;
+
+    padding: 40px;
+
+    background: rgba(18, 22, 40, 0.9);
+
+    border: 1px solid rgba(120, 130, 255, 0.25);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 30px rgba(88, 101, 242, 0.15),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+
+.form:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 40px rgba(88, 101, 242, 0.25),
+        0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+#guess {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(99, 102, 241, 0.7);
+}
+
+
+/* ========================================
+   INPUT
+======================================== */
+
+.guessField {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background: #0c1020;
+
+    border: 2px solid #292f55;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+.guessField::placeholder {
+    color: #6b7280;
+}
+
+
+.guessField:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 10px rgba(99, 102, 241, 0.4),
+        0 0 25px rgba(99, 102, 241, 0.15);
+
+    transform: scale(1.02);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.guessSubmit {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(99, 102, 241, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+
+.guessSubmit:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #818cf8,
+        #a78bfa
+    );
+
+    box-shadow:
+        0 8px 25px rgba(99, 102, 241, 0.5);
+}
+
+
+.guessSubmit:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+.guessSubmit:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ========================================
+   RESULT CARD
+======================================== */
+
+.resultParas {
+    width: 420px;
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: rgba(18, 22, 40, 0.85);
+
+    border: 1px solid rgba(120, 130, 255, 0.2);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+
+.resultParas:hover {
+    border-color: rgba(120, 130, 255, 0.4);
+}
+
+
+/* ========================================
+   RESULT TEXT
+======================================== */
+
+.resultParas p {
+    margin: 12px 0;
+
+    font-size: 16px;
+
+    color: #aab0c5;
+}
+
+
+.guesses {
+    color: #818cf8;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 8px rgba(129, 140, 248, 0.4);
+}
+
+
+.lastResult {
+    color: #f87171;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 8px rgba(248, 113, 113, 0.4);
+}
+
+
+/* ========================================
+   HIGH / LOW MESSAGE
+======================================== */
+
+.loworHi {
+    margin-top: 18px !important;
+
+    text-align: center;
+
+    font-size: 18px !important;
+
+    font-weight: 700;
+
+    color: #c4b5fd !important;
+
+    text-shadow:
+        0 0 10px rgba(196, 181, 253, 0.5);
+}
+
+
+/* ========================================
+   NEW GAME BUTTON
+======================================== */
+
+.newGame {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    background: transparent;
+
+    border: 2px solid #6366f1;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.newGame:hover {
+    background: #6366f1;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+
+.newGame:active {
+    transform: scale(0.97);
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .form {
+        width: 90%;
+
+        padding: 30px 25px;
+    }
+
+    .resultParas {
+        width: 90%;
+    }
+
+    #guess {
+        font-size: 25px;
+    }
+}
+

@@ -1,0 +1,50 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .canvas {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        .button {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            margin: 15px;
+            border: 3px solid #333;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #lightgreen {
+            background-color: lightgreen;
+            
+        }
+
+        #purple {
+            background-color: rgb(125, 69, 125);
+        }
+
+        #yellow {
+            background-color: rgb(105, 105, 52);
+        }
+
+        h2 {
+            margin-top: 60px;
+        }
+
+        h2 span {
+            display: block;
+            margin-top: 15px;
+        }

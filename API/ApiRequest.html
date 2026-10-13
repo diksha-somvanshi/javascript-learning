@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+
+<body style="background-color: #413c3c;">
+
+    <h1 style="color: rgb(185, 121, 121);">API Request</h1>
+
+    <script>
+        // API URL
+        const requesturl = 'https://randomuser.me/api/';
+
+        // Create XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        // Open a request
+        xhr.open('GET', requesturl);
+
+        // Monitor request state
+        xhr.onreadystatechange = function () {
+
+            console.log("Ready State:", xhr.readyState);
+
+            if (xhr.readyState === 4) {
+
+                console.log("Status:", xhr.status);
+                const data = JSON.parse(this.responseText);
+                //most of times, responseText is a string, so we need to parse it to JSON   
+                console.log(typeof data); 
+                console.log(data.followers); 
+            }
+        };
+
+        // Send request
+        xhr.send();
+    </script>
+
+</body>
+</html>
+
